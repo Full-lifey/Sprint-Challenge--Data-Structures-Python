@@ -48,6 +48,7 @@ class LinkedList:
         if self.head == None:
             return None
         else:
+          # Keep track of current node and last node for pointer switching
             current = self.head
             previous = None
             while current is not None:
