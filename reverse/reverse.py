@@ -52,8 +52,13 @@ class LinkedList:
             current = self.head
             previous = None
             while current is not None:
+                # Save next node
                 next = current.next_node
+                # Set current node's pointer to previous node (or none for first)
                 current.next_node = previous
+                # Add 'old node' to the saved previous so pointer can be switched
                 previous = current
+                # increment current node to the next in the list
                 current = next
+            # Once complete, set new head in list
             self.head = previous
